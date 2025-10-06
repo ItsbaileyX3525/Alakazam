@@ -6,6 +6,6 @@
     <title>Alakazam</title>
 </head>
 <body>
-    inital commit or something idk
+    
 </body>
 </html>
