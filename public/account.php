@@ -1,14 +1,22 @@
+<?php
+session_start();
+
+if (!in_array("logged_in", $_SESSION)) {
+    header("Location: /signup.php");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alakazam</title>
+    <link rel="stylesheet" href="/assets/styles/account.css">
     <link rel="stylesheet" href="/assets/styles/navbar.css">
-    <link rel="stylesheet" href="/assets/styles/index.css">
+    <title>Account page</title>
 </head>
 <body>
-
 <header>
   <div class="container">
 
@@ -22,12 +30,5 @@
 
   </div>
 </header>
-
-<main>
-  <div class="flex-container">
-    
-  </div>
-</main>
-
 </body>
 </html>
