@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Allow direct access to includes directory for API endpoints
+RewriteCond %{REQUEST_URI} ^/includes/ [NC]
+RewriteRule ^ - [L]
+
 RewriteCond %{THE_REQUEST} ^[A-Z]+\ /public/ [NC]
 RewriteRule ^ - [F,L]
 

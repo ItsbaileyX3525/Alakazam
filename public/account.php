@@ -2,9 +2,8 @@
 session_start();
 
 if (!in_array("logged_in", $_SESSION)) {
-    header("Location: /signup.php");
+  header("Location: /signup.php");
 }
-
 
 ?>
 <!DOCTYPE html>

@@ -1,8 +1,11 @@
 <?php
 session_start();
 
-if (!in_array("logged_in", $_SESSION)) {
-    header("Location: /");
+if (in_array("logged_in", $_SESSION)) {
+    if ($_SESSION["logged_in"] === "true" || $_SESSION["logged_in"]) {
+      header(header: "Location: /account");
+      exit();
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -11,6 +14,7 @@ if (!in_array("logged_in", $_SESSION)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/navbar.css">
+    <link rel="stylesheet" href="/assets/styles/signup.css">
     <title>Signup</title>
 </head>
 <body>
@@ -28,4 +32,5 @@ if (!in_array("logged_in", $_SESSION)) {
   </div>
 </header>
 </body>
+<script src="/assets/javascript/signup.js"></script>
 </html>

@@ -28,4 +28,5 @@ if (!in_array("logged_in", $_SESSION)) {
   </div>
 </header>
 </body>
+<script src="/assets/javascript/login.js"></script>
 </html>
