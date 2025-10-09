@@ -53,10 +53,10 @@
           In black clover the magic they actually use is magic, they use "mana" and spells from their grimoires.
         </p>
       </div>
-      <div class="card">
-        <h2 class="card-title">Epic Series</h2>
+      <div href="/animes/mashle.php" class="card" style="background-image: url('/assets/images/mashBackground.png')">
+        <h2 class="card-title">Mashle</h2>
         <p class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Mashle is a world full of magic but strangly enough, the main character doesn't have a lick of magic.
         </p>
       </div>
       <div class="card">

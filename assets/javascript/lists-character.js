@@ -38,7 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
 				modalAbility.textContent = ability;
 				
 				if (videoUrl && videoUrl.trim() !== "") {
-					modalVideo.src = videoUrl;
+					let embedUrl = videoUrl;
+					
+					if (videoUrl.includes('youtube.com/watch?v=')) {
+						const videoId = videoUrl.split('v=')[1].split('&')[0];
+						embedUrl = `https://www.youtube.com/embed/${videoId}`;
+					} else if (videoUrl.includes('youtu.be/')) {
+						const videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+						embedUrl = `https://www.youtube.com/embed/${videoId}`;
+					} else if (!videoUrl.includes('/embed/')) {
+						const videoIdMatch = videoUrl.match(/[?&]v=([^&]+)/);
+						if (videoIdMatch) {
+							embedUrl = `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+						}
+					}
+					
+					modalVideo.src = embedUrl;
 					modalVideo.parentElement.style.display = "block";
 				} else {
 					modalVideo.src = "";
