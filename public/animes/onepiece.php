@@ -3,9 +3,13 @@ session_start();
 
 $logged_in = false;
 
-if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === "true") {
+if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     $logged_in = true;
 }
+
+// Debug: Uncomment these lines to check your session
+// echo "<!-- DEBUG: logged_in = " . ($logged_in ? 'true' : 'false') . " -->";
+// echo "<!-- DEBUG: SESSION = " . print_r($_SESSION, true) . " -->";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -143,9 +147,37 @@ if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === "true") {
             </div>
           </div>
         </div>
+        
+        <div class="modal-body">
+          <div class="comments-section">
+            <h3>Comments</h3>
+            
+            <?php if ($logged_in): ?>
+            <form id="commentForm" class="comment-form">
+              <textarea 
+                id="commentTextarea" 
+                placeholder="Share your thoughts about this character..." 
+                maxlength="1000"
+                required></textarea>
+              <div class="comment-form-actions">
+                <button type="submit" id="commentSubmitBtn" class="comment-submit-btn">Post Comment</button>
+              </div>
+            </form>
+            <?php else: ?>
+            <div class="comment-login-message">
+              Please <a href="/login">log in</a> to leave a comment.
+            </div>
+            <?php endif; ?>
+            
+            <div id="commentsList" class="comments-list">
+              <div class="comments-empty">Loading comments...</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 </body>
 <script src="/assets/javascript/lists-character.js"></script>
+<script src="/assets/javascript/comment.js"></script>
 </html>

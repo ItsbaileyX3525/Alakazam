@@ -2,7 +2,7 @@
 session_start();
 
 if (in_array("logged_in", $_SESSION)) {
-    if ($_SESSION["logged_in"] === "true" || $_SESSION["logged_in"]) {
+    if ($_SESSION["logged_in"] === true || $_SESSION["logged_in"]) {
       header(header: "Location: /account");
       exit();
     }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Form Test</title>
+    <link rel="stylesheet" href="/assets/styles/lists.css">
+    <style>
+        body {
+            background: #1d1d1d;
+            padding: 50px;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="color: #fff;">Comment Form Test</h1>
+        
+        <div class="comments-section">
+            <h3>Comments</h3>
+            
+            <!-- This is what you should see when logged in -->
+            <form id="commentForm" class="comment-form">
+                <textarea 
+                    id="commentTextarea" 
+                    placeholder="Share your thoughts about this character..." 
+                    maxlength="1000"
+                    required></textarea>
+                <div class="comment-form-actions">
+                    <button type="submit" id="commentSubmitBtn" class="comment-submit-btn">Post Comment</button>
+                </div>
+            </form>
+            
+            <div id="commentsList" class="comments-list">
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-author">TestUser</span>
+                        <span class="comment-date">Oct 9, 2025 2:30 PM</span>
+                    </div>
+                    <p class="comment-text">This is a test comment to show what it looks like!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
