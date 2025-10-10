@@ -113,6 +113,7 @@ main {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     animation: fadeIn 0.3s ease;
+    overflow: auto;
 }
 
 .modal.active {
@@ -139,7 +140,25 @@ main {
     max-height: 85vh;
     position: relative;
     animation: slideUp 0.3s ease;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #1d1d1d;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #640064;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #7a007a;
 }
 
 @keyframes slideUp {
@@ -164,6 +183,9 @@ main {
     z-index: 10;
     transition: color 0.2s ease;
     line-height: 1;
+    background: #1d1d1d;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .modal-close:hover {
@@ -174,8 +196,7 @@ main {
     display: flex;
     gap: 2rem;
     padding: 2.5rem;
-    overflow-y: auto;
-    max-height: 85vh;
+    padding-bottom: 0;
 }
 
 .modal-left {
@@ -238,7 +259,7 @@ main {
 
 /* Comments Section */
 .comments-section {
-    margin-top: 2rem;
+    padding: 2rem 2.5rem;
     padding-top: 2rem;
     border-top: 1px solid #3a3a3a;
 }

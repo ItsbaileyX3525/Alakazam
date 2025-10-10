@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentCharacter = null;
     
-    // Make loadComments accessible globally so event listener can use it
     window.loadComments = function(characterName) {
         currentCharacter = characterName;
         const commentsList = document.getElementById('commentsList');
@@ -77,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.success) {
                     textarea.value = '';
                     window.loadComments(currentCharacter);
-                    alert('Comment posted successfully!');
                 } else {
                     alert(data.message || 'Failed to post comment');
                 }

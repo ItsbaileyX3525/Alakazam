@@ -88,7 +88,7 @@ if (!in_array("logged_in", $_SESSION)) {
             <div class="trending-rank">3</div>
             <div class="trending-info">
               <div class="trending-name">Solo Leveling</div>
-              <div class="trending-genre">ower Fantasy, Dark Action</div>
+              <div class="trending-genre">Power Fantasy, Dark Action</div>
             </div>
           </div>
         </div>
