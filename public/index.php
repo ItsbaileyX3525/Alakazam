@@ -37,7 +37,7 @@
     <p>
       Head over to the <a href="/signup">signup page</a> to get started with an account!<br>
       With an account you can post comments on characters that you love the most<br>
-      and discuss them with other people! Or you can see the <a href="lists">anime lists</a><br>
+      and discuss them with other people! Or you can see the <a href="/animelists">anime lists</a><br>
       page and get started viewing your favourite anime characters right away!
     </p>
 
