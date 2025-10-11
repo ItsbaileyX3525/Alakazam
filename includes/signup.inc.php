@@ -74,6 +74,8 @@ $userID = mysqli_insert_id($conn);
 $stmt->close();
 $conn->close();
 
+session_regenerate_id(true);
+
 $_SESSION["logged_in"] = true;
 $_SESSION["userID"] = $userID;
 $_SESSION["username"] = $username;

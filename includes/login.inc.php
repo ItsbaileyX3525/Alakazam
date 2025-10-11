@@ -83,6 +83,8 @@ if (!$verified) {
 $stmt->close();
 $conn->close();
 
+session_regenerate_id(true);
+
 $_SESSION["logged_in"] = true;
 $_SESSION["userID"] = $row["userID"];
 $_SESSION["username"] = $row["username"];

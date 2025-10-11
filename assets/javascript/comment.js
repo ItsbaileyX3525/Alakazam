@@ -31,19 +31,35 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        let html = '';
+        commentsList.innerHTML = '';
+        
         comments.forEach(comment => {
-            html += `
-                <div class="comment-item">
-                    <div class="comment-header">
-                        <span class="comment-author">${comment.username}</span>
-                        <span class="comment-date">${comment.created_at}</span>
-                    </div>
-                    <p class="comment-text">${comment.comment_text}</p>
-                </div>
-            `;
+            const commentItem = document.createElement('div');
+            commentItem.className = 'comment-item';
+            
+            const commentHeader = document.createElement('div');
+            commentHeader.className = 'comment-header';
+            
+            const commentAuthor = document.createElement('span');
+            commentAuthor.className = 'comment-author';
+            commentAuthor.textContent = comment.username; // Safe: uses textContent
+            
+            const commentDate = document.createElement('span');
+            commentDate.className = 'comment-date';
+            commentDate.textContent = comment.created_at; // Safe: uses textContent
+            
+            commentHeader.appendChild(commentAuthor);
+            commentHeader.appendChild(commentDate);
+            
+            const commentText = document.createElement('p');
+            commentText.className = 'comment-text';
+            commentText.innerHTML = comment.comment_text;
+            
+            commentItem.appendChild(commentHeader);
+            commentItem.appendChild(commentText);
+            
+            commentsList.appendChild(commentItem);
         });
-        commentsList.innerHTML = html;
     }
     
     const commentForm = document.getElementById('commentForm');
