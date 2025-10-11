@@ -1,7 +1,4 @@
 <?php
-// TODO: Add videos for the characters
-
-
 session_start();
 
 $logged_in = false;

@@ -71,13 +71,13 @@
         </p>
       </div>
       <div href="/animes/konosuba.php" class="card" style="background-image: url('/assets/images/ksBackground.png')">
-        <h2 class="card-title">Konosuba</h2>
+        <h2 class="card-title">Konosuba (UNDER CONSTRUCTION)</h2>
         <p class="card-body">
           After dying in a very stupid way, a God promised him a second chance and to bring one thing, he chose to bring her.
         </p>
       </div>
       <div href="/animes/tensura.php" class="card" style="background-image: url('/assets/images/tBackground.png')">
-        <h2 class="card-title">Slime Tensura</h2>
+        <h2 class="card-title">Slime Tensura (UNDER CONSTRUCTION)</h2>
         <p class="card-body">
           After being stabbed in Japan, he was reincarnated as a slime in a different world, because of his power he quickly rose to fame.
         </p>

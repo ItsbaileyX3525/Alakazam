@@ -41,6 +41,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     try {
+        if (!empty($user_id) && $user_id > 0) {
+            $rateStmt = $conn->prepare("SELECT TIMESTAMPDIFF(SECOND, created_at, NOW()) AS seconds_since FROM comments WHERE user_id = ? ORDER BY created_at DESC LIMIT 1");
+            $rateStmt->bind_param("i", $user_id);
+            $rateStmt->execute();
+            $rateResult = $rateStmt->get_result();
+            if ($lastRow = $rateResult->fetch_assoc()) {
+                $secondsSince = (int)$lastRow['seconds_since'];
+                $minInterval = 5; // seconds
+                if ($secondsSince < $minInterval) {
+                    $retryAfter = $minInterval - $secondsSince;
+                    echo json_encode([
+                        "success" => false,
+                        "message" => "RATE_LIMIT",
+                        "retry_after" => $retryAfter
+                    ]);
+                    exit;
+                }
+            }
+        }
+    } catch (Exception $e) {
+        error_log('Rate limit check failed: ' . $e->getMessage());
+    }
+
+    try {
         $stmt = $conn->prepare("INSERT INTO comments (character_name, user_id, username, comment_text) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("siss", $character_name, $user_id, $username, $comment_text);
         $stmt->execute();
