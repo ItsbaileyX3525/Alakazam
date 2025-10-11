@@ -1,0 +1,3 @@
+- Finish konosuba page & tensura page
+- Potentially add levels 
+- Rate limit comments to prevent spam

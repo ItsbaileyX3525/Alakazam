@@ -59,16 +59,27 @@
           Mashle is a world full of magic but strangly enough, the main character doesn't have a lick of magic.
         </p>
       </div>
-      <div class="card">
-        <h2 class="card-title">Popular Show</h2>
+      <div href="/animes/overlord.php" class="card" style="background-image: url('/assets/images/oBackground.png')">
+        <h2 class="card-title">Overlord</h2>
         <p class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          A world where a player gets transported to a different world as his own MMORPG character.
+      </div>
+      <div href="/animes/rezero.php" class="card" style="background-image: url('/assets/images/rzBackground.png')">
+        <h2 class="card-title">Re:Zero - Starting Life in Another World</h2>
+        <p class="card-body">
+          After a witch from another world fell in love with him, she granted him the ability to "never die"
         </p>
       </div>
-      <div class="card">
-        <h2 class="card-title">Top Rated</h2>
+      <div href="/animes/konosuba.php" class="card" style="background-image: url('/assets/images/ksBackground.png')">
+        <h2 class="card-title">Konosuba</h2>
         <p class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          After dying in a very stupid way, a God promised him a second chance and to bring one thing, he chose to bring her.
+        </p>
+      </div>
+      <div href="/animes/tensura.php" class="card" style="background-image: url('/assets/images/tBackground.png')">
+        <h2 class="card-title">Slime Tensura</h2>
+        <p class="card-body">
+          After being stabbed in Japan, he was reincarnated as a slime in a different world, because of his power he quickly rose to fame.
         </p>
       </div>
     </div>
